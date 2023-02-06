@@ -7,7 +7,7 @@ on:
 
 env:
   terraform: 1.3.0
-  tf_target_dir: example/examplea
+  tf_target_dir: example/state-writer
 
 jobs:
   terraform:
