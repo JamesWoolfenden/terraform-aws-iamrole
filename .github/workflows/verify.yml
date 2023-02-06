@@ -39,9 +39,9 @@ jobs:
         id: init
         run: terraform init
         working-directory: ${{ env.tf_target_dir }}
-      - name: Terraform Apply
-        id: apply
-        run: terraform apply --auto-approve
+      - name: Terraform plan
+        id: plan
+        run: terraform plan
         working-directory: ${{ env.tf_target_dir }}
   security:
     runs-on: ubuntu-latest
