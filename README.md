@@ -60,6 +60,7 @@ No modules.
 | <a name="input_assume"></a> [assume](#input\_assume) | n/a | `string` | n/a | yes |
 | <a name="input_policy"></a> [policy](#input\_policy) | n/a | `string` | n/a | yes |
 | <a name="input_role"></a> [role](#input\_role) | describe your role | `string` | `"pike"` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map(any)` | n/a | yes |
 
 ## Outputs
 
@@ -94,7 +95,8 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListAttachedRolePolicies",
                 "iam:ListInstanceProfilesForRole",
                 "iam:ListRolePolicies",
-                "iam:PutRolePolicy"
+                "iam:PutRolePolicy",
+                "iam:TagRole"
             ],
             "Resource": [
                 "*"

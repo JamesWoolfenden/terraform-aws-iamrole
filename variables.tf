@@ -11,3 +11,7 @@ variable "policy" {
 variable "assume" {
   type = string
 }
+
+variable "tags" {
+  type = map(any)
+}
