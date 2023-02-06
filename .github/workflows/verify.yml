@@ -39,6 +39,10 @@ jobs:
         id: init
         run: terraform init
         working-directory: ${{ env.tf_target_dir }}
+      - name: Terraform validate
+        id: validate
+        run: terraform validate
+        working-directory: ${{ env.tf_target_dir }}
       - name: Terraform plan
         id: plan
         run: terraform plan
@@ -61,6 +65,9 @@ jobs:
           mkdir "$GITHUB_WORKSPACE/bin"
           tar -xvf terraform-docs*.tar.gz --directory "$GITHUB_WORKSPACE/bin"
           chmod +x "$GITHUB_WORKSPACE/bin/terraform-docs"
+          lastversion actionlint --assets -d --verbose
+          tar -xvf actionlint*.tar.gz --directory "$GITHUB_WORKSPACE/bin"
+          chmod +x "$GITHUB_WORKSPACE/bin/actionlint"
           echo "$GITHUB_WORKSPACE/bin" >> "$GITHUB_PATH"
       - uses: pre-commit/action@v3.0.0
   version:
