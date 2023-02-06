@@ -47,8 +47,8 @@ jobs:
           mkdir "$GITHUB_WORKSPACE/bin"
           tar -xvf terraform-docs*.tar.gz --directory "$GITHUB_WORKSPACE/bin"
           chmod +x "$GITHUB_WORKSPACE/bin/terraform-docs"
-          lastversion actionlint --assets -d --verbose
-          tar -xvf actionlint*.tar.gz --directory "$GITHUB_WORKSPACE/bin"
+          wget https://github.com/rhysd/actionlint/releases/download/v1.6.23/actionlint_1.6.23_linux_amd64.tar.gz
+          tar -xvf actionlint_1.6.23_linux_amd64.tar.gz --directory "$GITHUB_WORKSPACE/bin"
           chmod +x "$GITHUB_WORKSPACE/bin/actionlint"
           echo "$GITHUB_WORKSPACE/bin" >> "$GITHUB_PATH"
       - uses: pre-commit/action@v3.0.0
