@@ -1,5 +1,4 @@
 ---
-
 # yamllint disable rule:line-length
 default_language_version:
   python: python3.9
