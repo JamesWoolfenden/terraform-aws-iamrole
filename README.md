@@ -96,7 +96,8 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListInstanceProfilesForRole",
                 "iam:ListRolePolicies",
                 "iam:PutRolePolicy",
-                "iam:TagRole"
+                "iam:TagRole",
+                "iam:UntagRole"
             ],
             "Resource": [
                 "*"
