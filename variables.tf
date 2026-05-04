@@ -3,15 +3,12 @@ variable "role" {
   description = "describe your role"
   default     = "pike"
 }
-
 variable "policy" {
   type = string
 }
-
 variable "assume" {
   type = string
 }
-
 variable "tags" {
   type = map(any)
 }
