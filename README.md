@@ -1,6 +1,6 @@
 # terraform-aws-iamrole
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-iamrole/workflows/Verify/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-iamrole)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-iamrole/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-iamrole)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-iamrole.svg)](https://github.com/JamesWoolfenden/terraform-aws-iamrole/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-iamrole.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-iamrole/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
@@ -39,8 +39,8 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| ---- | ------- |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.43.0 |
 
 ## Modules
 
@@ -49,14 +49,14 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_iam_role.pike](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy.pike](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_assume"></a> [assume](#input\_assume) | n/a | `string` | n/a | yes |
 | <a name="input_policy"></a> [policy](#input\_policy) | n/a | `string` | n/a | yes |
 | <a name="input_role"></a> [role](#input\_role) | describe your role | `string` | `"pike"` | no |
